@@ -1,0 +1,34 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+<script>
+    /* Função para pular linha */
+    function pulaLinha() {
+        document.write("<br>");
+    };
+
+    /* Função para mostrar o texto */
+    function mostra(texto) {
+        document.write(texto);
+        pulaLinha();
+    }
+
+    /* Função para mostrar o titulo */
+    function mostraTitulo(titulo) {
+        document.write("<h3>" + titulo + "</h3>");
+    }
+
+    function calculaIMC(peso, altura) {
+        var imc = peso / (altura * altura);
+        mostra("Peso: " + peso + " kg");
+        mostra("Altura: " + altura + " m");
+        mostra("IMC: " + Math.round(imc) + " kg/m²")
+        pulaLinha();
+    }
+
+    var peso = 67;
+    var altura = 1.53;
+
+    mostraTitulo("Cálculo de IMC");
+    calculaIMC(peso, altura);
+    calculaIMC(50, 1.53)
+</script>
