@@ -24,7 +24,20 @@
         mostra("IMC: " + Math.round(imc) + " kg/m²")
         pulaLinha();
         return imc;
+    }
 
+    function verificaIMC(imc1) {
+        if (imc1 < 18.5) {
+            mostra("A baixo da média");
+        }
+
+        if (imc1 > 35) {
+            mostra("Acima da média");
+        }
+
+        if (imc1 >= 18.5 && imc1 <= 35) {
+            mostra("Dentro da média");
+        }
     }
 
     var peso = prompt("Peso");
@@ -32,8 +45,11 @@
 
     mostraTitulo("Cálculo de IMC");
 
-
     var imc1 = calculaIMC(peso, altura);
+
+    verificaIMC(imc1);
+
+
     //var imc2 = calculaIMC(50, 1.53);
     //var mediaImc = (imc1 + imc2) / 2;
     //mostra("Média de IMC: " + Math.round(mediaImc) + " kg/m²");

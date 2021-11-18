@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+
+<script>
+    /* Função para pular linha */
+    function pulaLinha() {
+        document.write("<br>");
+    };
+
+    /* Função para mostrar o texto */
+    function mostra(texto) {
+        document.write(texto);
+        pulaLinha();
+    }
+
+    /* Função para mostrar o titulo */
+    function mostraTitulo(titulo) {
+        document.write("<h4>" + titulo + "</h4>");
+    }
+
+    var titulo = "Calopsita";
+    var funcao = "Exercicio";
+    var alerta = "Se a caixa de alerta não aparecer recarregue o navegador"
+
+    mostraTitulo(titulo);
+
+    mostra(funcao);
+    mostra(alerta);
+    pulaLinha();
+
+    var a = parseInt("10");
+    var b = parseInt("Calopsita");
+    var c = parseInt(10);
+
+    mostra(a);
+    mostra(b);
+    mostra(c);
+</script>

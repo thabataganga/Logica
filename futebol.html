@@ -26,9 +26,36 @@
     var vitorias = parseInt(prompt("Entre com o número de vitórias"));
     var empates = parseInt(prompt("Entre com o número de empates"));
 
+    var pontosAnoPassado = parseInt(prompt("Pontos do time ano passado"));
+
     var pontos = (vitorias * 3) + empates;
 
     if (pontos) {
         mostra("Pontos do time: " + pontos);
     }
+
+    if (pontos > pontosAnoPassado) {
+        pulaLinha();
+        mostra("Seu time esta melhor que ano passado");
+    }
+
+    if (pontos < pontosAnoPassado) {
+        pulaLinha();
+        mostra("Seu time esta pior que ano passado");
+    }
+
+    if (pontos == pontosAnoPassado) {
+        pulaLinha();
+        mostra("Seu time esta igual ano passado");
+    }
+
+    /* else {
+        if (pontos == pontosAnoPassado) {
+            pulaLinha();
+            mostra("Seu time esta igual ano passado");
+        } else {
+            pulaLinha();
+            mostra("Seu time esta pior que ano passado");
+        }
+    } */
 </script>

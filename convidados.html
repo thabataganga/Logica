@@ -1,0 +1,38 @@
+<meta charset="UTF-8">
+
+<script>
+    /* Função para pular linha */
+    function pulaLinha() {
+        document.write("<br>");
+    };
+
+    /* Função para mostrar o texto */
+    function mostra(texto) {
+        document.write(texto);
+        pulaLinha();
+    }
+
+    /* Função para mostrar o titulo */
+    function mostraTitulo(titulo) {
+        document.write("<h4>" + titulo + "</h4>");
+    }
+
+    var titulo = "Calculadora de convidados";
+    var funcao = "App para calcular a quantidade de convidados na festa";
+    var alerta = "Se a caixa de alerta não aparecer recarregue o navegador"
+
+    mostraTitulo(titulo);
+
+    mostra(funcao);
+    mostra(alerta);
+    pulaLinha();
+
+    var convidados = parseInt(prompt("Número de convidados"));
+    var vips = parseInt(prompt("Número de convidados VIP's"));
+
+    var total = convidados + vips;
+
+    if (total) {
+        mostra("O total de convidados é " + total);
+    }
+</script>
