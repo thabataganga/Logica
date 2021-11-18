@@ -1,0 +1,32 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+<script>
+    /* Função para pular linha */
+    function pulaLinha() {
+        document.write("<br>");
+    };
+
+    /* Função para mostrar o texto */
+    function mostra(texto) {
+        document.write(texto);
+        pulaLinha();
+    }
+
+    /* Função para mostrar o titulo */
+    function mostraTitulo(titulo) {
+        document.write("<h3>" + titulo + "</h3>");
+    }
+
+    var descobrimento = 1500;
+    var mediaGeracao = 28;
+    var anoAtual = 2021;
+    var periodo = anoAtual - descobrimento;
+    var geracoesNoPeriodo = periodo / mediaGeracao;
+
+    mostraTitulo("Gerações de Brasileiros");
+    mostra("Descobrimento: " + descobrimento);
+    mostra("Hoje: " + anoAtual);
+    mostra("Periodo: " + periodo + " anos");
+    mostra("Média de cada geração: " + mediaGeracao + " anos");
+    mostra("Gerações: " + Math.round(geracoesNoPeriodo))
+</script>

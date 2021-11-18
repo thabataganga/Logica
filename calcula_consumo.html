@@ -13,8 +13,8 @@
     }
 
     /* Função para mostrar o titulo */
-    function mostraTitulo(texto) {
-        document.write(texto);
+    function mostraTitulo(titulo) {
+        document.write("<h4>" + titulo + "</h4>");
     }
 
     /* Capacidade do tanque */
@@ -40,11 +40,11 @@
     var custoLitroGasolina = custoGasolina / caminhoComGasolina;
     var custoLitroAlcool = custoAlcool / caminhoComAlcool;
 
-    mostraTitulo("<h3>Álcool ou Gasolina?</h3>");
+    mostraTitulo("Álcool ou Gasolina?");
     mostra("Tanque: " + tanque + " L");
 
     /* Exibição Gasolina */
-    mostraTitulo("<h4>Gasolina</h4>");
+    mostraTitulo("Gasolina");
     mostra("Preço médio: " + precoGasolina + " R$/L");
     mostra("Custo médio: " + custoGasolina + " R$");
     mostra("Distância percorrida: " + caminhoComGasolina + " Km");
@@ -52,7 +52,7 @@
     mostra("Custo por quilometro " + custoLitroGasolina + " R$/Km");
 
     /* Exibição Alcool */
-    mostraTitulo("<h4>Alcool</h4>");
+    mostraTitulo("Alcool");
     mostra("Preço médio: " + precoAlcool + " R$/L");
     mostra("Custo médio: " + custoAlcool + " R$");
     mostra("Distância percorrida: " + caminhoComAlcool + " Km");
