@@ -1,10 +1,26 @@
 <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 
 <script>
+    /* Função para pular linha */
+    function pulaLinha() {
+        document.write("<br>");
+    };
+
+    /* Função para mostrar o texto */
+    function mostra(texto) {
+        document.write(texto);
+        pulaLinha();
+    }
+
+    /* Função para mostrar o titulo */
+    function mostraTitulo(texto) {
+        document.write(texto);
+    }
+
     /* Capacidade do tanque */
     var tanque = 40;
 
-    /* DeltaS */
+    /* Delta S */
     var caminhoComGasolina = 480;
     var caminhoComAlcool = 300;
 
@@ -24,23 +40,22 @@
     var custoLitroGasolina = custoGasolina / caminhoComGasolina;
     var custoLitroAlcool = custoAlcool / caminhoComAlcool;
 
-    document.write("<h3>Álcool ou Gasolina?</h3>");
-
-    document.write("Tanque: " + tanque + " L <br>");
+    mostraTitulo("<h3>Álcool ou Gasolina?</h3>");
+    mostra("Tanque: " + tanque + " L");
 
     /* Exibição Gasolina */
-    document.write("<h4>Gasolina</h4>");
-    document.write("Preço médio: " + precoGasolina + " R$/L <br>");
-    document.write("Custo médio: " + custoGasolina + " R$ <br>");
-    document.write("Distância percorrida: " + caminhoComGasolina + " Km <br>");
-    document.write("Consumo: " + consumoDeGasolina + " Km/L <br>");
-    document.write("Custo por quilometro " + custoLitroGasolina + " R$/Km");
+    mostraTitulo("<h4>Gasolina</h4>");
+    mostra("Preço médio: " + precoGasolina + " R$/L");
+    mostra("Custo médio: " + custoGasolina + " R$");
+    mostra("Distância percorrida: " + caminhoComGasolina + " Km");
+    mostra("Consumo: " + consumoDeGasolina + " Km/L");
+    mostra("Custo por quilometro " + custoLitroGasolina + " R$/Km");
 
     /* Exibição Alcool */
-    document.write("<h4>Alcool</h4>");
-    document.write("Preço médio: " + precoAlcool + " R$/L <br>");
-    document.write("Custo médio: " + custoAlcool + " R$ <br>");
-    document.write("Distância percorrida: " + caminhoComAlcool + " Km <br>");
-    document.write("Consumo: " + consumoDeAlcool + " Km/L <br>");
-    document.write("Custo por quilometro " + custoLitroAlcool + " R$/Km");
+    mostraTitulo("<h4>Alcool</h4>");
+    mostra("Preço médio: " + precoAlcool + " R$/L");
+    mostra("Custo médio: " + custoAlcool + " R$");
+    mostra("Distância percorrida: " + caminhoComAlcool + " Km");
+    mostra("Consumo: " + consumoDeAlcool + " Km/L");
+    mostra("Custo por quilometro " + custoLitroAlcool + " R$/Km");
 </script>
