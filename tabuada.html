@@ -1,17 +1,39 @@
 <meta charset="UTF-8">
-<script>
-    var n = 8;
 
-    document.write("<h1>Tabuada</h1>");
-    document.write("Valor: " + n + "<br><br>");
-    document.write(n + " x 01 = " + n * 1 + "<br>");
-    document.write(n + " x 02 = " + n * 2 + "<br>");
-    document.write(n + " x 03 = " + n * 3 + "<br>");
-    document.write(n + " x 04 = " + n * 4 + "<br>");
-    document.write(n + " x 05 = " + n * 5 + "<br>");
-    document.write(n + " x 06 = " + n * 6 + "<br>");
-    document.write(n + " x 07 = " + n * 7 + "<br>");
-    document.write(n + " x 08 = " + n * 8 + "<br>");
-    document.write(n + " x 09 = " + n * 9 + "<br>");
-    document.write(n + " x 10 = " + n * 10 + "<br>");
+<script>
+    /* Função para pular linha */
+    function pulaLinha() {
+        document.write("<br>");
+    };
+
+    /* Função para mostrar o texto */
+    function mostra(texto) {
+        document.write(texto);
+        pulaLinha();
+    }
+
+    /* Função para mostrar o titulo */
+    function mostraTitulo(titulo) {
+        document.write("<h4>" + titulo + "</h4>");
+    }
+
+    function sorteia(n) {
+        return Math.round(Math.random() * n);
+    }
+
+    var titulo = "Tabuada";
+    var funcao = "Usando for";
+    var alerta = "Se a caixa de alerta não aparecer recarregue o navegador"
+
+    mostraTitulo(titulo);
+
+    mostra(funcao);
+    //mostra(alerta);
+    pulaLinha();
+
+    var multiplicador = 0;
+
+    for (multiplicador; multiplicador <= 10; multiplicador++) {
+        mostra(7 * multiplicador);
+    }
 </script>
