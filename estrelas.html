@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+
+<script>
+    /* Função para pular linha */
+    function pulaLinha() {
+        document.write("<br>");
+    };
+
+    /* Função para mostrar o texto */
+    function mostra(texto) {
+        document.write(texto);
+        pulaLinha();
+    }
+
+    /* Função para mostrar o titulo */
+    function mostraTitulo(titulo) {
+        document.write("<h4>" + titulo + "</h4>");
+    }
+
+    function sorteia(n) {
+        return Math.round(Math.random() * n);
+    }
+
+    var titulo = "Estrelas";
+    //var funcao = "Meu primeiro jogo";
+    mostraTitulo(titulo);
+
+    for (var linha = 1; linha <= 3; linha++) {
+        for (var coluna = 1; coluna < 10; coluna++) {
+            document.write("*")
+        }
+        pulaLinha();
+    }
+</script>

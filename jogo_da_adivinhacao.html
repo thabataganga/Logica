@@ -32,18 +32,21 @@
     pulaLinha();
 
     var numeroPensado = sorteia(10);
-    var chute = parseInt(prompt("Digite seu chute!"));
-    mostra("Chute: " + chute);
 
-    if (chute == numeroPensado) {
-        mostra("Acertou mizeraví!");
-    } else {
-        mostra("ERROU!! o número pensado foi " + numeroPensado + "!");
-        if (chute > numeroPensado) {
-            mostra("Seu chute é maior que o número pensado!");
+    var tentativas = 1;
 
+    while (tentativas <= 3) {
+        var chute = parseInt(prompt("Digite seu chute!"));
+        mostra("Chute: " + chute);
+        if (chute == numeroPensado) {
+            alert("Acertou mizeraví!");
+            break;
         } else {
-            mostra("Seu chute é menor que o número pensado!");
+            alert("ERROU!!");
         }
+        tentativas++;
     }
+
+    pulaLinha();
+    mostra("O número pensado foi " + numeroPensado);
 </script>
