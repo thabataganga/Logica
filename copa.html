@@ -21,8 +21,8 @@
         return Math.round(Math.random() * n);
     }
 
-    var titulo = "Jogo da Adivinhação";
-    var funcao = "Meu primeiro jogo";
+    var titulo = "Copa do Mundo";
+    var funcao = "Quais anos tiveram copa";
     var alerta = "Se a caixa de alerta não aparecer recarregue o navegador"
 
     mostraTitulo(titulo);
@@ -31,19 +31,10 @@
     mostra(alerta);
     pulaLinha();
 
-    var numeroPensado = sorteia(10);
-    var chute = parseInt(prompt("Digite seu chute!"));
-    mostra("Chute: " + chute);
+    var anoCopa = 1930;
 
-    if (chute == numeroPensado) {
-        mostra("Acertou mizeraví!");
-    } else {
-        mostra("ERROU!! o número pensado foi " + numeroPensado + "!");
-        if (chute > numeroPensado) {
-            mostra("Seu chute é maior que o número pensado!");
-
-        } else {
-            mostra("Seu chute é menor que o número pensado!");
-        }
+    while (anoCopa <= 2022) {
+        mostra("Ano de copa " + anoCopa);
+        anoCopa = anoCopa + 4;
     }
 </script>

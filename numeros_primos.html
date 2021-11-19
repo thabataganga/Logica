@@ -21,8 +21,8 @@
         return Math.round(Math.random() * n);
     }
 
-    var titulo = "Jogo da Adivinhação";
-    var funcao = "Meu primeiro jogo";
+    var titulo = "Números primos";
+    var funcao = "Imprime os números primos de 1 a 100";
     var alerta = "Se a caixa de alerta não aparecer recarregue o navegador"
 
     mostraTitulo(titulo);
@@ -31,19 +31,13 @@
     mostra(alerta);
     pulaLinha();
 
-    var numeroPensado = sorteia(10);
-    var chute = parseInt(prompt("Digite seu chute!"));
-    mostra("Chute: " + chute);
+    var contador = 1;
+    // mostra(contador);
 
-    if (chute == numeroPensado) {
-        mostra("Acertou mizeraví!");
-    } else {
-        mostra("ERROU!! o número pensado foi " + numeroPensado + "!");
-        if (chute > numeroPensado) {
-            mostra("Seu chute é maior que o número pensado!");
-
-        } else {
-            mostra("Seu chute é menor que o número pensado!");
-        }
+    while (contador <= 100) {
+        mostra(contador);
+        contador = contador + 2;
     }
+
+    mostra("FIM");
 </script>
